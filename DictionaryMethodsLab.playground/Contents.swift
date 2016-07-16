@@ -13,7 +13,10 @@
  */
 // write your code here
 
-
+var starWarsHeroes = ["Luke Skywalker",
+                      "Princess Leia",
+                      "Han Solo",
+                      "Rey"]
 
 
 /*: question2
@@ -21,7 +24,8 @@
  */
 // write your code here
 
-
+var starWarsVillains = ["Darth Vader",
+                        "Emperor Palpatine" ]
 
 
 /*: question3
@@ -29,7 +33,10 @@
  */
 // write your code here
 
-
+var starWarsDroids = ["R2-D2",
+                      "C-3P0",
+                      "IG-88",
+                      "BB-8" ]
 
 
 /*: question4
@@ -37,7 +44,7 @@
  */
 // write your code here
 
-
+starWarsVillains.append("Kylo Ren")
 
 
 /*: question5
@@ -45,7 +52,9 @@
  */
 // write your code here
 
-
+if let index = starWarsDroids.indexOf("IG-88") {
+    starWarsDroids.removeAtIndex(index)
+}
 
 
 /*: question6
@@ -53,7 +62,9 @@
  */
 // write your code here
 
-
+var starWarsCharacters = ["Heroes"   : starWarsHeroes,
+                          "Villains" : starWarsVillains,
+                          "Droids"   : starWarsDroids]
 
 
 /*: question7
@@ -61,7 +72,7 @@
  */
 // write your code here
 
-
+var starWarsGangsters = ["Watto", "Jabba the Hutt"]
 
 
 /*: question8
@@ -69,7 +80,7 @@
  */
 // write your code here
 
-
+starWarsCharacters["Gangsters"] = starWarsGangsters  
 
 
 /*: question9
@@ -77,7 +88,9 @@
  */
 // write your code here
 
-
+for (key, val) in starWarsCharacters {
+    print("\(key) : \(val.count)")
+}
 
 
 /*: question10
@@ -85,7 +98,8 @@
  */
 // write your code here
 
-
+let countKey = starWarsCharacters.keys.count
+print(countKey)
 
 
 /*: question11
@@ -93,7 +107,11 @@
  */
 // write your code here
 
-
+if (starWarsCharacters.isEmpty) {
+    print("The dictionary is empty!")
+} else {
+    print("There are \(countKey) items in the dictionary.")
+}
 
 
 /*: question12
@@ -101,7 +119,9 @@
  */
 // write your code here
 
-
+var starWarsJedi = ["Yoda",
+                    "Obi-Wan Kenobi",
+                    "Mace Windu" ]
 
 
 /*: question13
@@ -109,7 +129,7 @@
  */
 // write your code here
 
-
+starWarsCharacters["Jedi"] = starWarsJedi
 
 
 /*: question14
@@ -117,7 +137,12 @@
  */
 // write your code here
 
-
+if let bountyHunters = starWarsCharacters["Bounty Hunters"] {
+    starWarsCharacters.removeValueForKey("Bounty Hunters")
+    print("Removed Bounty Hunters")
+} else {
+    print("Bounty Hunters did not exist")
+}
 
 
 /*: question15
@@ -132,7 +157,11 @@
  }
  */
 
-
+if var jedi = starWarsCharacters["Jedi"] {
+    jedi.append("Aayla Secura")
+    starWarsCharacters["Jedi"] = jedi
+    print(jedi)
+}
 
 
 /*: question16
@@ -147,6 +176,11 @@
  }
  */
 
+if let heroes = starWarsCharacters["Heroes"] {
+    for hero in heroes {
+        print(hero)
+    }
+}
 
 
 
